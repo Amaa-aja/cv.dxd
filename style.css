@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Noto-Sans" sans-serif;
+    background-color: rgb(38, 163, 201);
+    color: #ffffff;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 5rem;
+}
+.email{
+    font-size: 14px;
+    font-weight: 400;
+}
+.sosial-media{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sosial-media a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease-in-out
+}
+.sosial-media a:hover{
+    color: rgb(99, 99, 99);
+}
+hr{
+    border-color: antiquewhite;
+    margin: 0 4.5rem;
+}
+.hero {
+    display: flex;
+    height: 70vh;
+    flex-direction: column;
+    justify-content: center;  /* Vertically center the content */
+    align-items: center;      /* Horizontally center the content */
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.heading{
+    margin-top: 1rem;
+    font-size: 38px;
+    line-height: 40px;
+    text-align: center;
+}
+.btn-primary{
+    text-decoration: none;
+    background-color: rgb(120, 183, 238);
+    border: 1px solid white;
+    color: rgb(0, 0, 0);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover{
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid rgb(128, 128, 128);
+}
+
+.my-client h2{
+    color: rgb(255, 255, 255);
+    width: 350px;
+    background-color: rgba(0, 115, 168, 0.795);
+    border: 1px solid white;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 37%;
+}
+@keyframes shine {
+    0% { transform: rotate(50deg) translateX(-150%); }
+    100% { transform: rotate(50deg) translateX(150%); }
+  }
+  
+  .client-container {
+    overflow-x: hidden;
+    position: relative;
+    max-width: 100%;
+    padding: 40px 0;
+    border: 1px solid #ffffff;
+}
+
+.client-list {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    width: 250%; /* Karena ada duplikat */
+    will-change: transform;
+}
+
+/* Gradient overlay untuk efek fade */
+.client-container::before,
+.client-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 2;
+}
+
+.client-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(113, 234, 255, 0.9) 0%, transparent 100%);
+}
+
+.client-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(113, 234, 255, 0.9) 0%, transparent 100%); 
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0); /* Geser ke kiri */
+    }
+    100% {
+        transform: translateX(-50%); /* Geser setengah width */
+    }
+}
+
+/* Adjust ukuran logo */
+.client-logo {
+    width: 140px; /* Sesuaikan dengan aspek ratio */
+    height: 90px; /* Sesuaikan dengan aspek ratio */
+    object-fit: contain;  /* Sesuaikan dengan aspek ratio */
+    filter: grayscale(100%);  /* Mengubah warna menjadi hitam putih */
+    transition: all 0.3s ease-in-out;   /*membuat efek transisi ketika dihover */
+    margin: 0 50px; /* Jarak antar logo */
+    flex-shrink: 0; /* Jangan diperkecil */
+}
+
+.client-logo:hover {
+    filter: grayscale(0%);  /* Menghilangkan grayscale */
+    transform: scale(1.1);  /* Perbesar */
+}
+
+/* Untuk mobile */
+@media (max-width: 500px) {
+    .client-list {
+        animation-duration: 0.5s;  /* Animasi lebih cepat */
+    }
+    
+    .client-logo {
+        width: 150px; /* Sesuaikan dengan aspek ratio */
+        height: 60px; /* Sesuaikan dengan aspek ratio */
+        margin: 0 25px; /* Jarak lebih kecil */
+    }
+}
+.skill{
+    padding: 1rem;
+    background-color: rgba(0, 115, 168, 0.795);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 25px;
+    height: 110px;
+    width: 750px;
+    align-items: center;
+    margin-left: 450px;
+}
+.my-skill h2{
+    color: rgb(255, 255, 255);
+    bottom: 12 px;
+    font-size: 28px
+    
+}
+.skill-list{
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem;
+    gap: 70px;
+    
+}
+.skill-card {
+    background-color: #969696;
+    border: 2px solid white; 
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out; 
+}
+
+.skill-image{
+    width: 110px;
+    height: 55px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+    align-items: center;
+}
+.skill-image:hover{
+    cursor: pointer;
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+.skill-name{
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease-in-out;
+    margin-top: 11px;
+}
+.project{
+    margin: 25px;
+}
+.project h2{
+    font-size: 28px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+.project-list{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    color: #000000;
+}
+.project-card{
+    background-color:rgba(0, 159, 233, 0.795);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+.project-image{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+.project-name{
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.project-card:hover{
+    cursor: pointer;
+    color: #ffffff;
+    filter: grayscale(15%);
+    transform: scale(1.1)
+}
+.maps-container {
+    text-align: center;
+    margin: 50px auto; /* Tambahkan jarak agar tidak bertumpuk */
+}
+
+.maps {
+    border: 2px solid #474747;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    height: 350px;
+}
+
+.maps-h2{
+    text-align: center;
+    font-size: 10px;
+}
+
+.h3{
+    font-size: medium;
+}
+.akun-sosmed {
+    margin: 40px auto; /* Pusatkan elemen */
+    max-width: 400px;  /* Lebar lebih proporsional */
+    background-color: rgba(0, 115, 168, 0.9);
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Pastikan semua isi berada di tengah */
+    justify-content: center;
+}
+.sosmed {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sosmed-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.sosmed-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.sosmed-image {
+    width: 40px; /* Sedikit lebih besar agar terlihat lebih jelas */
+    height: 40px;
+}
+
+.sosmed-link {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+main {
+    flex: 1;
+    padding-bottom: 20px; /* Tambahkan padding agar footer tidak tertiban */
+}
+
+footer {
+    background-color: rgba(0, 115, 168, 0.9);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    margin-top: auto;
+}
